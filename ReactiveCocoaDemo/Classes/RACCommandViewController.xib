@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RACCommandViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JQI-o8-QYH">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <mutableString key="text">// 一、RACCommand使用步骤:
+    // 1.创建命令 initWithSignalBlock:(RACSignal * (^)(id input))signalBlock
+    // 2.在signalBlock中，创建RACSignal，并且作为signalBlock的返回值
+    // 3.执行命令 - (RACSignal *)execute:(id)input
+
+    // 二、RACCommand使用注意:
+    // 1.signalBlock必须要返回一个信号，不能传nil.
+    // 2.如果不想要传递信号，直接创建空的信号[RACSignal empty];
+    // 3.RACCommand中信号如果数据传递完，必须调用[subscriber sendCompleted]，这时命令才会执行完毕，否则永远处于执行中。
+    // 4.RACCommand需要被强引用，否则接收不到RACCommand中的信号，因此RACCommand中的信号是延迟发送的。
+
+    // 三、RACCommand设计思想：内部signalBlock为什么要返回一个信号，这个信号有什么用。
+    // 1.在RAC开发中，通常会把网络请求封装到RACCommand，直接执行某个RACCommand就能发送请求。
+    // 2.当RACCommand内部请求到数据的时候，需要把请求的数据传递给外界，这时候就需要通过signalBlock返回的信号传递了。
+
+    // 四、如何拿到RACCommand中返回信号发出的数据。
+    // 1.RACCommand有个执行信号源executionSignals，这个是signal of signals(信号的信号),意思是信号发出的数据是信号，不是普通的类型。
+    // 2.订阅executionSignals就能拿到RACCommand中返回的信号，然后订阅signalBlock返回的信号，就能获取发出的值。
+
+    // 五、监听当前命令是否正在执行executing
+
+    // 六、使用场景,监听按钮点击，网络请求</mutableString>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="JQI-o8-QYH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="COj-N8-MCF"/>
+                <constraint firstItem="JQI-o8-QYH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="MBE-l3-7wO"/>
+                <constraint firstAttribute="bottom" secondItem="JQI-o8-QYH" secondAttribute="bottom" id="sb9-aQ-WHS"/>
+                <constraint firstAttribute="trailing" secondItem="JQI-o8-QYH" secondAttribute="trailing" id="yUu-Hv-SNR"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
