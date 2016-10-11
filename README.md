@@ -51,7 +51,7 @@ return [RACDisposable disposableWithBlock:^{
 
 NSLog(@"信号被销毁");
 
-}];
+    }];
 }];
 
 // 3.订阅信号,才会激活信号.
@@ -60,8 +60,8 @@ NSLog(@"信号被销毁");
 NSLog(@"接收到数据:%@",x);
 }];
 
-
-文／袁峥Seemygo（简书作者）
-原文链接：http://www.jianshu.com/p/87ef6720a096
-著作权归作者所有，转载请联系作者获得授权，并标注“简书作者”。
 ```
+
+## 上手ReactiveCocoa
+袁峥Seemygo：http://www.jianshu.com/p/87ef6720a096
+唐巧的技术客：http://blog.devtang.com/2014/02/11/reactivecocoa-introduction/

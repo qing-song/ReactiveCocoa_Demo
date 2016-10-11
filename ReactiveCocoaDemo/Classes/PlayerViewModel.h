@@ -10,7 +10,7 @@
 
 @interface PlayerViewModel : NSObject
 
-@property(nonatomic, retain) NSString *playerName;
+@property(nonatomic, copy) NSString *playerName;
 
 @property(nonatomic, assign) double points;
 @property(nonatomic, assign) double stepAmount;
