@@ -21,7 +21,7 @@
     NSArray *array = @[@"hello", @"qing", @"song", @1, @2, @3];
     [array.rac_sequence.signal subscribeNext:^(id x) {
        
-        NSLog(@"rac_sequence    %@",x);
+        NSLog(@"遍历：%@",x);
     }];
     
     // RACTuple(元组对象)

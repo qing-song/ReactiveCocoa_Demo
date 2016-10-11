@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextFieldViewController">
@@ -14,27 +15,41 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VwD-HT-wrG">
-                    <rect key="frame" x="48" y="52" width="186" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VwD-HT-wrG">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="jfe-cN-WOa"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ade-Yi-Zyj">
-                    <rect key="frame" x="48" y="106" width="186" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ade-Yi-Zyj">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="bW0-b0-Rb3"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZ8-32-kry">
-                    <rect key="frame" x="114" y="197" width="30" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZ8-32-kry">
+                    <color key="backgroundColor" red="0.47058823529999999" green="0.76470588240000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="登录"/>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <point key="canvasLocation" x="494" y="333"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cZ8-32-kry" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="100" id="JDr-vy-GWd"/>
+                <constraint firstItem="cZ8-32-kry" firstAttribute="top" secondItem="ade-Yi-Zyj" secondAttribute="bottom" constant="40" id="KWN-6z-5bS"/>
+                <constraint firstItem="ade-Yi-Zyj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="100" id="P3a-d3-4ga"/>
+                <constraint firstAttribute="trailing" secondItem="VwD-HT-wrG" secondAttribute="trailing" constant="100" id="UM6-vh-QG5"/>
+                <constraint firstAttribute="trailing" secondItem="ade-Yi-Zyj" secondAttribute="trailing" constant="100" id="ex7-kw-yWt"/>
+                <constraint firstItem="ade-Yi-Zyj" firstAttribute="top" secondItem="VwD-HT-wrG" secondAttribute="bottom" constant="30" id="ld8-Ip-Hnm"/>
+                <constraint firstItem="VwD-HT-wrG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="100" id="uF9-aG-Mze"/>
+                <constraint firstItem="VwD-HT-wrG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="xPo-Pg-zsz"/>
+                <constraint firstAttribute="trailing" secondItem="cZ8-32-kry" secondAttribute="trailing" constant="100" id="zWS-Gv-zz2"/>
+            </constraints>
+            <point key="canvasLocation" x="-91.5" y="116.5"/>
         </view>
     </objects>
 </document>

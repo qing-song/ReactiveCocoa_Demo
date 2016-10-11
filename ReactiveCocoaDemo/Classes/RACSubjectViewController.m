@@ -44,11 +44,11 @@
         NSLog(@"第二个订阅信号：%@",x);
     }];
     
+    // 发送信号
     [subject sendNext:@1];
     
     // 如果想当一个信号被订阅，就重复播放之前所有值，需要先发送信号，在订阅信号。
     // 也就是先保存值，在订阅值。
-    
     
     // 1.创建信号
     RACReplaySubject *replaySubject = [RACReplaySubject subject];

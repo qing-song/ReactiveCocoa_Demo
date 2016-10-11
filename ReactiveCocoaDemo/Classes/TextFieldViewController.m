@@ -46,14 +46,17 @@
     
     RACSignal *filteredUsername =[usernameSourceSignal
                                   filter:^BOOL(id value){
+                                      
                                       NSString*text = value;
-                                      NSLog(@"text  %@",text);
+                                      
                                       return text.length > 3;
+                                      
                                   }];
     
     // 3. 订阅信号
     [filteredUsername subscribeNext:^(id x){
-   NSLog(@"%@", x);
+        
+        NSLog(@"%@", x);
     }];
     
     
